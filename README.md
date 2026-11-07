@@ -55,18 +55,18 @@ The design is small enough to read in one sitting.
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/run-dark.webp">
-        <img src="docs/assets/readme/tour/run-light.webp" alt="Terminal output of the iverilog compile and the vvp run ending in SUCCESS">
+        <img src="docs/assets/readme/tour/run-light.webp" alt="Terminal output of the iverilog compile with its three warnings and the vvp run ending in SUCCESS">
       </picture>
       <h3>Compile and run</h3>
-      Icarus Verilog compiles the modules and the testbench prints SUCCESS.
+      Icarus Verilog compiles the six modules and the testbench prints SUCCESS.
     </td>
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/decode-dark.webp">
-        <img src="docs/assets/readme/tour/decode-light.webp" alt="Code card of the opcode case statement in islemci.v">
+        <img src="docs/assets/readme/tour/decode-light.webp" alt="Code card of the ILKER and TASI cases in islemci.v">
       </picture>
       <h3>Instruction decode</h3>
-      A case statement on the opcode sets up the ALU, immediates, memory access and the shifter.
+      Each opcode case, ILKER and TASI here, sets up the addresses, operands, immediates and register values for its instruction.
     </td>
   </tr>
   <tr>

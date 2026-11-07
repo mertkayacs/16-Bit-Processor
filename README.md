@@ -48,6 +48,49 @@ The design is small enough to read in one sitting.
 | <img src="docs/assets/readme/icons/layers.svg" width="18" height="18" alt=""> **Five modules** | The processor, the ALU, the extender, the unified memory and the shifter each have their own file. |
 | <img src="docs/assets/readme/icons/circle-check.svg" width="18" height="18" alt=""> **A testbench that checks itself** | The testbench runs the program in Mem.mem and prints SUCCESS when register 6 holds 0x004c. |
 
+## A quick tour
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/run-dark.webp">
+        <img src="docs/assets/readme/tour/run-light.webp" alt="Terminal output of the iverilog compile and the vvp run ending in SUCCESS">
+      </picture>
+      <h3>Compile and run</h3>
+      Icarus Verilog compiles the modules and the testbench prints SUCCESS.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/decode-dark.webp">
+        <img src="docs/assets/readme/tour/decode-light.webp" alt="Code card of the opcode case statement in islemci.v">
+      </picture>
+      <h3>Instruction decode</h3>
+      A case statement on the opcode sets up the ALU, immediates, memory access and the shifter.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/alu-dark.webp">
+        <img src="docs/assets/readme/tour/alu-light.webp" alt="Code card of AMB.v, the arithmetic logic unit">
+      </picture>
+      <h3>The ALU</h3>
+      Two 16-bit operands are added or subtracted, and an equality flag is set.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/image-dark.webp">
+        <img src="docs/assets/readme/tour/image-light.webp" alt="Code card of the first lines of Mem.mem">
+      </picture>
+      <h3>Program image</h3>
+      Mem.mem holds the program as binary text, one byte per line.
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>The terminal card is a real run. Code cards show the files as they are in the repository.</sub></p>
+
 ## Features
 
 **Processor**
